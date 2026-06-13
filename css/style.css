@@ -353,6 +353,12 @@ img {
     transform: translateY(-5px);
 }
 
+i {
+    font-size: 18px;
+    display: inline-block;
+    color: inherit;
+}
+
 /* =========================
    SOCIALS
 ========================= */
@@ -488,6 +494,7 @@ img {
     margin-bottom: 12px;
     font-size: 15px;
 }
+
 
 /* =========================
    Education
