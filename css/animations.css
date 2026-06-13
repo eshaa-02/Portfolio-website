@@ -1,0 +1,508 @@
+/* =========================
+   FLOATING EFFECT
+========================= */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.avatar-card {
+
+    animation: float 5s ease-in-out infinite;
+}
+
+/* =========================
+   GLOW PULSE
+========================= */
+
+@keyframes glow {
+
+    0% {
+        box-shadow: 0 0 10px rgba(56, 189, 248, .3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(56, 189, 248, .8),
+            0 0 60px rgba(139, 92, 246, .4);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(56, 189, 248, .3);
+    }
+}
+
+.avatar-card {
+    animation:
+        float 5s ease-in-out infinite,
+        glow 3s infinite;
+}
+
+/* =========================
+   LOADER BAR
+========================= */
+
+@keyframes loaderProgress {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.loader-bar span {
+
+    animation:
+        loaderProgress 2.5s ease forwards;
+}
+
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+
+    animation:
+        fadeIn 1s ease forwards;
+}
+
+/* =========================
+   SLIDE UP
+========================= */
+
+@keyframes slideUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(80px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.slide-up {
+
+    animation:
+        slideUp .8s ease forwards;
+}
+
+/* =========================
+   SLIDE LEFT
+========================= */
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-80px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+.slide-left {
+
+    animation:
+        slideLeft .8s ease forwards;
+}
+
+/* =========================
+   SLIDE RIGHT
+========================= */
+
+@keyframes slideRight {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(80px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+.slide-right {
+
+    animation:
+        slideRight .8s ease forwards;
+}
+
+/* =========================
+   SCALE IN
+========================= */
+
+@keyframes scaleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.8);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+
+    animation:
+        scaleIn .7s ease forwards;
+}
+
+/* =========================
+   HERO GRADIENT
+========================= */
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero {
+
+    background:
+        linear-gradient(-45deg,
+            rgba(56, 189, 248, .1),
+            rgba(139, 92, 246, .1),
+            rgba(56, 189, 248, .05),
+            rgba(139, 92, 246, .05));
+
+    background-size:
+        400% 400%;
+
+    animation:
+        gradientMove 12s ease infinite;
+}
+
+/* =========================
+   BUTTON SHINE
+========================= */
+
+.btn {
+
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .3),
+            transparent);
+
+    transition: .7s;
+}
+
+.btn:hover::before {
+
+    left: 100%;
+}
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.skill-card,
+.project-card,
+.glass-card,
+.stat-card {
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.glass-card:hover,
+.stat-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 15px 40px rgba(56, 189, 248, .15);
+}
+
+/* =========================
+   ICON ROTATE
+========================= */
+
+.socials a:hover {
+
+    transform:
+        rotate(360deg) scale(1.1);
+
+    transition: .6s;
+}
+
+/* =========================
+   SKILL BAR FILL
+========================= */
+
+@keyframes fillBar {
+
+    from {
+        width: 0;
+    }
+}
+
+.skill-bar span {
+
+    animation:
+        fillBar 2s ease;
+}
+
+/* =========================
+   BOUNCE
+========================= */
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    40% {
+
+        transform:
+            translateY(-15px);
+    }
+
+    60% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+#backToTop:hover {
+
+    animation:
+        bounce 1s infinite;
+}
+
+/* =========================
+   ROTATE
+========================= */
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-code {
+
+    animation:
+        rotate 15s linear infinite;
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+.particles {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.particles span {
+
+    position: absolute;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(56, 189, 248, .5);
+
+    animation:
+        floatParticle 15s linear infinite;
+}
+
+@keyframes floatParticle {
+
+    from {
+
+        transform:
+            translateY(100vh) scale(0);
+    }
+
+    to {
+
+        transform:
+            translateY(-100px) scale(1);
+    }
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(80px);
+
+    transition:
+        all .8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+/* =========================
+   NAV LINK ACTIVE
+========================= */
+
+.nav-links a.active {
+
+    color: var(--primary);
+}
+
+/* =========================
+   TEXT BLINK
+========================= */
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.typing-cursor {
+
+    animation:
+        blink .8s infinite;
+}
+
+/* =========================
+   LOADER FADE OUT
+========================= */
+
+@keyframes loaderFade {
+
+    to {
+
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loader-hide {
+
+    animation:
+        loaderFade .8s forwards;
+}
